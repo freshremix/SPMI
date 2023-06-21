@@ -21,8 +21,8 @@ RUN make -j 6
 RUN sudo make altinstall
 RUN python3.11 -m pip install --upgrade pip
 WORKDIR /root/SP
-RUN git clone https://github.com/freshremix/SPDI.git
-WORKDIR /root/SP/SPDI
+RUN git clone https://github.com/freshremix/ispdi.git
+WORKDIR /root/SP/ispdi
 RUN pip3.11 install -r requirements.txt
 RUN ls
 RUN BACKGROUND python3.11 main.py && \
